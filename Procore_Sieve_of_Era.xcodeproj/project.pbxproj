@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B4A492C51DF87F880081DFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492C41DF87F880081DFD2 /* AppDelegate.swift */; };
-		B4A492C71DF87F880081DFD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492C61DF87F880081DFD2 /* ViewController.swift */; };
+		B4A492C71DF87F880081DFD2 /* LetsGetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492C61DF87F880081DFD2 /* LetsGetStarted.swift */; };
 		B4A492CA1DF87F880081DFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A492C81DF87F880081DFD2 /* Main.storyboard */; };
 		B4A492CC1DF87F880081DFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A492CB1DF87F880081DFD2 /* Assets.xcassets */; };
 		B4A492CF1DF87F880081DFD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A492CD1DF87F880081DFD2 /* LaunchScreen.storyboard */; };
 		B4A492DA1DF87F880081DFD2 /* Procore_Sieve_of_EraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492D91DF87F880081DFD2 /* Procore_Sieve_of_EraTests.swift */; };
 		B4A492E51DF87F880081DFD2 /* Procore_Sieve_of_EraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492E41DF87F880081DFD2 /* Procore_Sieve_of_EraUITests.swift */; };
+		B4A492F71DF891A20081DFD2 /* DisplayGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492F61DF891A20081DFD2 /* DisplayGrid.swift */; };
+		B4A492F91DF8A0D00081DFD2 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492F81DF8A0D00081DFD2 /* NumberCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		B4A492C11DF87F880081DFD2 /* Procore_Sieve_of_Era.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Procore_Sieve_of_Era.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A492C41DF87F880081DFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4A492C61DF87F880081DFD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4A492C61DF87F880081DFD2 /* LetsGetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsGetStarted.swift; sourceTree = "<group>"; };
 		B4A492C91DF87F880081DFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4A492CB1DF87F880081DFD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A492CE1DF87F880081DFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		B4A492E01DF87F880081DFD2 /* Procore_Sieve_of_EraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Procore_Sieve_of_EraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A492E41DF87F880081DFD2 /* Procore_Sieve_of_EraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Procore_Sieve_of_EraUITests.swift; sourceTree = "<group>"; };
 		B4A492E61DF87F880081DFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4A492F61DF891A20081DFD2 /* DisplayGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayGrid.swift; sourceTree = "<group>"; };
+		B4A492F81DF8A0D00081DFD2 /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		B4A492C31DF87F880081DFD2 /* Procore_Sieve_of_Era */ = {
 			isa = PBXGroup;
 			children = (
+				B4A492F61DF891A20081DFD2 /* DisplayGrid.swift */,
 				B4A492C41DF87F880081DFD2 /* AppDelegate.swift */,
-				B4A492C61DF87F880081DFD2 /* ViewController.swift */,
+				B4A492C61DF87F880081DFD2 /* LetsGetStarted.swift */,
 				B4A492C81DF87F880081DFD2 /* Main.storyboard */,
 				B4A492CB1DF87F880081DFD2 /* Assets.xcassets */,
 				B4A492CD1DF87F880081DFD2 /* LaunchScreen.storyboard */,
 				B4A492D01DF87F880081DFD2 /* Info.plist */,
+				B4A492F81DF8A0D00081DFD2 /* NumberCell.swift */,
 			);
 			path = Procore_Sieve_of_Era;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4A492C71DF87F880081DFD2 /* ViewController.swift in Sources */,
+				B4A492F91DF8A0D00081DFD2 /* NumberCell.swift in Sources */,
+				B4A492F71DF891A20081DFD2 /* DisplayGrid.swift in Sources */,
+				B4A492C71DF87F880081DFD2 /* LetsGetStarted.swift in Sources */,
 				B4A492C51DF87F880081DFD2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.raqeeb.Procore-Sieve-of-Era";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -416,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.raqeeb.Procore-Sieve-of-Era";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
