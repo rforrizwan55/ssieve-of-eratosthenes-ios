@@ -121,6 +121,9 @@
                     <navigationItem key="navigationItem" title="Bunch of numbers" id="Mcr-FS-cPv">
                         <barButtonItem key="backBarButtonItem" title=" " id="mM2-be-1Ic"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cvOutlet" destination="AYo-sa-trR" id="6dy-Sn-crc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0y-cq-tub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

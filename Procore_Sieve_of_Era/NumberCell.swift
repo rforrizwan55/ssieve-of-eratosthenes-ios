@@ -17,6 +17,8 @@ class NumberCell: UICollectionViewCell {
     }
     override func layoutSubviews() {
          Lbl.textAlignment = NSTextAlignment.Center
+        self.layer.cornerRadius = 20
+        
     }
     
 }

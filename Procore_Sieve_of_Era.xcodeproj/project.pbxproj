@@ -494,6 +494,7 @@
 				B4A492EB1DF87F880081DFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4A492EC1DF87F880081DFD2 /* Build configuration list for PBXNativeTarget "Procore_Sieve_of_EraTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +503,7 @@
 				B4A492EE1DF87F880081DFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4A492EF1DF87F880081DFD2 /* Build configuration list for PBXNativeTarget "Procore_Sieve_of_EraUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +512,7 @@
 				B4A492F11DF87F880081DFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

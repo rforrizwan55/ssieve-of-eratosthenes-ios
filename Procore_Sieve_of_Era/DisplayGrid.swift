@@ -10,15 +10,24 @@ import UIKit
 
 class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var data1: [String]?
+    var flagReload: Bool? = false
     var data:String?
+    @IBOutlet weak var cvOutlet: UICollectionView!
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
        self.automaticallyAdjustsScrollViewInsets = false;
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        let button1 = UIBarButtonItem(image: UIImage(named: "magic"), style: .Plain, target: self, action:#selector(DisplayGrid.magicWand))
+        self.navigationItem.rightBarButtonItem  = button1
     }
+    
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Int(data!)!
     }
+    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell:NumberCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! NumberCell
@@ -26,13 +35,33 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
         
         if isPrime(indexPath.row+1) {
             
-            cell.backgroundColor = UIColor.blueColor()
+            cell.backgroundColor = UIColor.cyanColor()
             
         }
-        else{
-            cell.backgroundColor = UIColor.cyanColor()
+        else {
+            if flagReload == true{
+            cell.backgroundColor = UIColor(patternImage: UIImage(named:"wrong1")!)
+            }else{
+               cell.backgroundColor = UIColor(patternImage: UIImage(named:"wrong")!)
+            }
+            
         }
+        
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        print("Cell \(indexPath.row) selected")
+    }
+    
+    func magicWand(){
+
+        cvOutlet.reloadData()
+        if flagReload == true{
+            flagReload = false
+        }else{
+            flagReload = true
+        }
     }
     
     func delayedEffect(indexPath: NSIndexPath,cell:NumberCell){
@@ -60,10 +89,6 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
             i = i + 1
         }
         return true
-    }
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("Cell \(indexPath.row) selected")
     }
     
     
