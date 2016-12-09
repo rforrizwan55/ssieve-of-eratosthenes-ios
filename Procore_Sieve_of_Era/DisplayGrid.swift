@@ -17,7 +17,7 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       self.automaticallyAdjustsScrollViewInsets = false;
+        self.automaticallyAdjustsScrollViewInsets = false;
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         let button1 = UIBarButtonItem(image: UIImage(named: "magic"), style: .Plain, target: self, action:#selector(DisplayGrid.magicWand))
         self.navigationItem.rightBarButtonItem  = button1
@@ -39,12 +39,7 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
             
         }
         else {
-            if flagReload == true{
-            cell.backgroundColor = UIColor(patternImage: UIImage(named:"wrong1")!)
-            }else{
-               cell.backgroundColor = UIColor(patternImage: UIImage(named:"wrong")!)
-            }
-            
+            imageChooser(cell)
         }
         
         return cell
@@ -54,9 +49,18 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
         print("Cell \(indexPath.row) selected")
     }
     
+    func imageChooser(cell:NumberCell){
+        if flagReload == true{
+            cell.backgroundColor = UIColor(patternImage: UIImage(named:"wrong1")!)
+        }else{
+            cell.backgroundColor = UIColor(patternImage: UIImage(named:"wrong")!)
+        }
+    }
+    
     func magicWand(){
 
         cvOutlet.reloadData()
+        
         if flagReload == true{
             flagReload = false
         }else{
@@ -68,7 +72,7 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
         let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(indexPath.row) * Int64(NSEC_PER_SEC))
         
         dispatch_after(time, dispatch_get_main_queue()) {
-            // Put your code which should be executed with a delay here
+            
             cell.backgroundColor = UIColor.blueColor()
             
         }
