@@ -10,9 +10,12 @@ import UIKit
 
 class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
     var flagReload: Bool? = false
     var data:String?
     var numbersList:[Bool] = []
+    
+    
     @IBOutlet weak var cvOutlet: UICollectionView!
     
     override func viewDidLoad() {
@@ -60,7 +63,7 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
     }
     
     func magicWand(){
-
+        
         cvOutlet.reloadData()
         
         if flagReload == true{
@@ -70,20 +73,11 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
         }
     }
     
-    func delayedEffect(indexPath: NSIndexPath,cell:NumberCell){
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(indexPath.row) * Int64(NSEC_PER_SEC))
-        
-        dispatch_after(time, dispatch_get_main_queue()) {
-            
-            cell.backgroundColor = UIColor.blueColor()
-            
-        }
-    }
     
     func listOfSieveNumbers(n:Int){
         
         for var i = 2; i <= n; i += 1 {
-         numbersList.append(true)
+            numbersList.append(true)
         }
         
         for var j = 2; j*j <= n; j += 1 {
@@ -91,27 +85,42 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
                 for var k = 2; k*j <= n; k += 1 {
                     numbersList[k*j-2] = false
                     
-                    }
+                }
             }
         }
     }
     
-    func isPrime(n: Int) -> Bool {
-        if n <= 1 {
-            return false
-        }
-        if n <= 3 {
-            return true
-        }
-        var i = 2
-        while i*i <= n {
-            if n % i == 0 {
-                return false
-            }
-            i = i + 1
-        }
-        return true
-    }
+    //unused code
+    /*
+     func isPrime(n: Int) -> Bool {
+     if n <= 1 {
+     return false
+     }
+     if n <= 3 {
+     return true
+     }
+     var i = 2
+     while i*i <= n {
+     if n % i == 0 {
+     return false
+     }
+     i = i + 1
+     }
+     return true
+     }
+     
+     func delayedEffect(indexPath: NSIndexPath,cell:NumberCell){
+     let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(indexPath.row) * Int64(NSEC_PER_SEC))
+     
+     dispatch_after(time, dispatch_get_main_queue()) {
+     
+     cell.backgroundColor = UIColor.blueColor()
+     
+     }
+     }
+     
+     */
+    
     
     
 }
