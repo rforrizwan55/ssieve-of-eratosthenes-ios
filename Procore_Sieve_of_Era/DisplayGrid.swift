@@ -12,6 +12,7 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
     
     var flagReload: Bool? = false
     var data:String?
+    var numbersList:[Bool] = []
     @IBOutlet weak var cvOutlet: UICollectionView!
     
     override func viewDidLoad() {
@@ -21,19 +22,20 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         let button1 = UIBarButtonItem(image: UIImage(named: "magic"), style: .Plain, target: self, action:#selector(DisplayGrid.magicWand))
         self.navigationItem.rightBarButtonItem  = button1
+        listOfSieveNumbers(Int(data!)!)
     }
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Int(data!)!
+        return Int(data!)!-2
     }
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell:NumberCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! NumberCell
-        cell.Lbl.text = String(indexPath.row+1)
+        cell.Lbl.text = String(indexPath.row+2)
         
-        if isPrime(indexPath.row+1) {
+        if numbersList[indexPath.row] {
             
             cell.backgroundColor = UIColor.cyanColor()
             
@@ -75,6 +77,22 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
             
             cell.backgroundColor = UIColor.blueColor()
             
+        }
+    }
+    
+    func listOfSieveNumbers(n:Int){
+        
+        for var i = 2; i <= n; i += 1 {
+         numbersList.append(true)
+        }
+        
+        for var j = 2; j*j <= n; j += 1 {
+            if numbersList[j] {
+                for var k = 2; k*j <= n; k += 1 {
+                    numbersList[k*j-2] = false
+                    
+                    }
+            }
         }
     }
     
