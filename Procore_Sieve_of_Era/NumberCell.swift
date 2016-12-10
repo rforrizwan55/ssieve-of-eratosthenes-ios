@@ -12,12 +12,15 @@ class NumberCell: UICollectionViewCell {
     
     @IBOutlet weak var Lbl: UILabel!
     
+    //preparing cell for reuse
     override func prepareForReuse() {
         self.backgroundColor = UIColor.clearColor()
     }
+    
+    //settings for cell
     override func layoutSubviews() {
-         Lbl.textAlignment = NSTextAlignment.Center
-        self.layer.cornerRadius = 20
+         Lbl.textAlignment = NSTextAlignment.Center //aligning text to center
+        self.layer.cornerRadius = 20 // rounded border
         
     }
     
