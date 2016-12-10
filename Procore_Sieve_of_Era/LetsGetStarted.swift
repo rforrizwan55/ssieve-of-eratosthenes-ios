@@ -13,6 +13,7 @@ class LetsGetStarted: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var btnLetsGo: UIButton!
     
+    //constant
     let maxNumbers = 7
     
     //Let's go button action listener
