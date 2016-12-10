@@ -12,8 +12,17 @@ class LetsGetStarted: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
     
+    @IBOutlet weak var btnLetsGo: UIButton!
     @IBAction func btnClick(sender: UIButton) {
-        self.textField.resignFirstResponder()
+        if textField.text != ""{
+            self.textField.resignFirstResponder()
+        }else{
+            showAlert("Field cannot be empty")
+        }
+    }
+    
+    override func viewDidLoad() {
+        textField.addTarget(self, action: #selector(LetsGetStarted.textFieldDidChange(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -25,6 +34,22 @@ class LetsGetStarted: UIViewController {
         //{
            (segue.destinationViewController as! DisplayGrid).data = textField.text
         //}
+    }
+    
+    func textFieldDidChange(textField: UITextField) {
+        if textField.text == "" {
+            btnLetsGo.enabled = false
+            btnLetsGo.tintColor = UIColor.grayColor()
+        } else {
+            btnLetsGo.enabled = true
+            btnLetsGo.tintColor = UIColor.blueColor()
+        }
+    }
+    
+    func showAlert(message:String){
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
 

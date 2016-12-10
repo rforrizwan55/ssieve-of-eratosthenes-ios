@@ -37,7 +37,7 @@ class DisplayGrid: UIViewController,UICollectionViewDataSource, UICollectionView
         
         if numbersList[indexPath.row] {
             
-            cell.backgroundColor = UIColor.cyanColor()
+            cell.backgroundColor = UIColor(patternImage: UIImage(named:"bg")!)
             
         }
         else {
