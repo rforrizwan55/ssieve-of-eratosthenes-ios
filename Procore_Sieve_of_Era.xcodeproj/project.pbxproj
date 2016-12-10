@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B412AF241DFBC30B00D17D0A /* Licence.txt in Resources */ = {isa = PBXBuildFile; fileRef = B412AF231DFBC30B00D17D0A /* Licence.txt */; };
 		B4A492C51DF87F880081DFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492C41DF87F880081DFD2 /* AppDelegate.swift */; };
 		B4A492C71DF87F880081DFD2 /* LetsGetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A492C61DF87F880081DFD2 /* LetsGetStarted.swift */; };
 		B4A492CA1DF87F880081DFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A492C81DF87F880081DFD2 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B412AF231DFBC30B00D17D0A /* Licence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Licence.txt; sourceTree = "<group>"; };
 		B4A492C11DF87F880081DFD2 /* Procore_Sieve_of_Era.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Procore_Sieve_of_Era.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A492C41DF87F880081DFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A492C61DF87F880081DFD2 /* LetsGetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsGetStarted.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		B4A492B81DF87F880081DFD2 = {
 			isa = PBXGroup;
 			children = (
+				B412AF231DFBC30B00D17D0A /* Licence.txt */,
 				B4A492C31DF87F880081DFD2 /* Procore_Sieve_of_Era */,
 				B4A492D81DF87F880081DFD2 /* Procore_Sieve_of_EraTests */,
 				B4A492E31DF87F880081DFD2 /* Procore_Sieve_of_EraUITests */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B412AF241DFBC30B00D17D0A /* Licence.txt in Resources */,
 				B4A492CF1DF87F880081DFD2 /* LaunchScreen.storyboard in Resources */,
 				B4A492CC1DF87F880081DFD2 /* Assets.xcassets in Resources */,
 				B4A492CA1DF87F880081DFD2 /* Main.storyboard in Resources */,
